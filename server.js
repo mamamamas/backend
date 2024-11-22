@@ -9,11 +9,10 @@ const bodyParser = require('body-parser');
 const crypto = require('crypto');
 const app = express();
 const serverPort = process.env.PORT || 3002;
-const { body, validationResult } = require('express-validator');
 
-const jwt = require('jsonwebtoken');
-const passport = require('passport');
-const session = require('express-session');
+
+
+
 const cors = require('cors');
 app.use(cors({
     origin: '*',
@@ -21,13 +20,10 @@ app.use(cors({
 
 
 const authRoute = require('./route/authRoute');
-const Request = require('../api/model/appointmentModel');
-const User = require('./model/userModel');
-const Item = require('../api/model/menu');
-const googleUser = require('../api/model/googleSchema');
+
 const inventoryRoute = require('../api/route/inventoryRoute');
 const userRoute = require('../api/route/userRoute');
-const fs = require('fs');
+
 const checkTokenBlacklist = require('../api/middleware/logOut');
 const medicalInfo = require('../api/route/medicalRoute');
 const authenticateTokens = require('../api/middleware/authenticateToken');
@@ -37,16 +33,12 @@ const archiveRoute = require('./route/archiveRoute');
 const medicalRoute = require("./route/medic");
 const stockRoutes = require("../api/route/stocksRoute");
 const posterRoute = require("./route/poster");
-const weightRoute = require("../api/route/weightRoute");
-const googleRouter = require("../api/route/googleRouter");
 const requestRoute = require("../api/route/requestsRoute");
 const notificationsRoute = require("../api/route/notificationRoute");
 const loginGoogle = require("./route/authRoute");
 const eventRoute = require("../api/route/eventRoute");
 const adminRoute = require("../api/route/adminRoute");
 const scheduleRoute = require("../api/route/scheduleRoute");
-const SerialPort = require("serialport");
-const Readline = require("@serialport/parser-readline");
 const postRoute = require("../api/route/postRoute");
 const chartRoute = require("../api/route/chartRoute");
 app.use(bodyParser.urlencoded({ extended: true }));
