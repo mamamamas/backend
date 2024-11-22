@@ -16,7 +16,7 @@ const passport = require('passport');
 const session = require('express-session');
 const cors = require('cors');
 app.use(cors({
-    origin: ['http://localhost:3000', 'https://saulus-myo8hu43t-markchristiandurana75-gmailcoms-projects.vercel.app'],
+    origin: '*',
 }));
 
 
