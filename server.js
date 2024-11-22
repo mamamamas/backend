@@ -21,7 +21,7 @@ app.use(cors({
 
 const authRoute = require('./route/authRoute');
 
-const inventoryRoute = require('../api/route/inventoryRoute');
+const inventoryRoute = require('./route/inventoryRoute');
 const userRoute = require('../api/route/userRoute');
 
 const checkTokenBlacklist = require('../api/middleware/logOut');
