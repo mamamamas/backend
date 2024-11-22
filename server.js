@@ -20,7 +20,7 @@ app.use(cors({
 }));
 
 
-const authRoute = require('../api/route/auth');
+const authRoute = require('./route/authRoute');
 const Request = require('../api/model/appointmentModel');
 const User = require('./model/userModel');
 const Item = require('../api/model/menu');
@@ -41,7 +41,7 @@ const weightRoute = require("../api/route/weightRoute");
 const googleRouter = require("../api/route/googleRouter");
 const requestRoute = require("../api/route/requestsRoute");
 const notificationsRoute = require("../api/route/notificationRoute");
-const loginGoogle = require("../api/route/auth");
+const loginGoogle = require("./route/authRoute");
 const eventRoute = require("../api/route/eventRoute");
 const adminRoute = require("../api/route/adminRoute");
 const scheduleRoute = require("../api/route/scheduleRoute");
