@@ -10,7 +10,7 @@ const crypto = require('crypto');
 const app = express();
 const serverPort = process.env.PORT || 3002;
 const { body, validationResult } = require('express-validator');
-const bcrypt = require('bcrypt');
+
 const jwt = require('jsonwebtoken');
 const passport = require('passport');
 const session = require('express-session');
